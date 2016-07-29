@@ -32,7 +32,33 @@ Llave2 = false;
 Llave3 = false;
 Llave4 = false;
 Llave5 = false;
+
+
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.lives</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>6</string>
           </argument>
         </arguments>
       </action>
@@ -279,10 +305,37 @@ if (place_meeting(x,y, objAguaPuntos6))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy();
+            <string>
+if(place_meeting(x,y,objTigre))
+if(global.lives &gt; 0) {room_restart()}
 audio_play_sound(sndMuerte,10,false)
-room_restart();
+
+if(global.lives = 0){room_goto(Perdiste)}
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>-1</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.lives</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>-1</string>
           </argument>
         </arguments>
       </action>

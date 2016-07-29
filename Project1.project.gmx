@@ -26,21 +26,24 @@
     <sprite>sprites\sprManga</sprite>
     <sprite>sprites\sprite12</sprite>
     <sprite>sprites\sprite13</sprite>
+    <sprite>sprites\vidas</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
     <background>background\background1</background>
+    <background>background\background2</background>
+    <background>background\background3</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\objParedLateral</object>
     <object>objects\objParedCentral</object>
-    <object>objects\objPantera1</object>
+    <object>objects\objPanteraVertical</object>
     <object>objects\objTigre</object>
     <object>objects\objMeta</object>
     <object>objects\objBalonVert</object>
     <object>objects\objBalonHori</object>
-    <object>objects\objPantera2</object>
+    <object>objects\objPanteraHorizontal</object>
     <object>objects\objPantera_estatica</object>
     <object>objects\objPanteraaleatoria</object>
     <object>objects\objEnemigoPadre</object>
@@ -69,13 +72,20 @@
       <object>objects\objAguaPuntos6</object>
     </objects>
     <object>objects\objInicio</object>
+    <object>objects\objPerdiste</object>
+    <object>objects\objHud</object>
+    <object>objects\objGanaste</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Inicio</room>
-    <room>rooms\NIvel1</room>
+    <room>rooms\Nivel1</room>
     <room>rooms\Nivel2</room>
     <room>rooms\Nivel3</room>
     <room>rooms\Nivel4</room>
+    <room>rooms\Nivel5</room>
+    <room>rooms\Nivel6</room>
+    <room>rooms\Ganaste</room>
+    <room>rooms\Perdiste</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
