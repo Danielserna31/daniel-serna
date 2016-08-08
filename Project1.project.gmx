@@ -77,9 +77,9 @@
     <object>objects\objGanaste</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\Nivel2</room>
     <room>rooms\Inicio</room>
     <room>rooms\Nivel1</room>
-    <room>rooms\Nivel2</room>
     <room>rooms\Nivel3</room>
     <room>rooms\Nivel4</room>
     <room>rooms\Nivel5</room>

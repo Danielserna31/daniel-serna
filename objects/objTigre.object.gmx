@@ -235,58 +235,6 @@ if (Llave5)
           </argument>
         </arguments>
       </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Aguas
-
-if (place_meeting(x,y, objAguaPuntos1))
-    {
-    with(objAguaPuntos1){instance_destroy();}
-    audio_play_sound(sndAgua,10,false)
-    }
-if (place_meeting(x,y, objAguaPuntos2))
-    {
-    with(objAguaPuntos2){instance_destroy();}
-    audio_play_sound(sndAgua,10,false)
-    }
-if (place_meeting(x,y, objAguaPuntos3))
-    {
-    with(objAguaPuntos3){instance_destroy();}
-    audio_play_sound(sndAgua,10,false)
-    }
-if (place_meeting(x,y, objAguaPuntos4))
-    {
-    with(objAguaPuntos4){instance_destroy();}
-    audio_play_sound(sndAgua,10,false)
-    }
-if (place_meeting(x,y, objAguaPuntos5))
-    {
-    with(objAguaPuntos5){instance_destroy();}
-    audio_play_sound(sndAgua,10,false)
-    }
-if (place_meeting(x,y, objAguaPuntos6))
-    {
-    with(objAguaPuntos6){instance_destroy();}
-    audio_play_sound(sndAgua,10,false)
-    }
-</string>
-          </argument>
-        </arguments>
-      </action>
     </event>
     <event eventtype="4" ename="objEnemigoPadre">
       <action>
@@ -307,8 +255,9 @@ if (place_meeting(x,y, objAguaPuntos6))
             <kind>1</kind>
             <string>
 if(place_meeting(x,y,objTigre))
-if(global.lives &gt; 0) {room_restart()}
+if (global.lives=0) {room_restart();}
 audio_play_sound(sndMuerte,10,false)
+
 
 if(global.lives = 0){room_goto(Perdiste)}
 </string>
