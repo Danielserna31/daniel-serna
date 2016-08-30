@@ -57,6 +57,9 @@
     <background>background\background2</background>
     <background>background\background3</background>
     <background>background\background4</background>
+    <background>background\background5</background>
+    <background>background\background6</background>
+    <background>background\background7</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -64,14 +67,19 @@
   </scripts>
   <objects name="objects">
     <object>objects\objPlayer</object>
+    <object>objects\objPlayer2</object>
     <object>objects\objEnemigo</object>
     <object>objects\objEnemigoLedge</object>
+    <object>objects\objEnemigoLedge2</object>
     <object>objects\objEnemigoDisDer</object>
     <object>objects\objEnemigoDisIzq</object>
     <object>objects\objEnemigoDis</object>
     <object>objects\objEnemigoInd</object>
+    <object>objects\objEnemigoInd2</object>
     <object>objects\objEnemigoVolador</object>
+    <object>objects\objEnemigoVolador2</object>
     <object>objects\objEnemigoVoladorDis</object>
+    <object>objects\objEnemigoVoladorDis2</object>
     <object>objects\objBOSS</object>
     <object>objects\objSpawnerEnemigo</object>
     <object>objects\objSpawnerPower</object>
@@ -81,7 +89,6 @@
     <object>objects\objPlataformaMovible</object>
     <object>objects\objPlataformaMovibleVertical</object>
     <object>objects\objPared</object>
-    <object>objects\objPared2</object>
     <object>objects\objSpikes</object>
     <object>objects\objBala</object>
     <object>objects\objBalaBazuca</object>
@@ -91,12 +98,13 @@
     <object>objects\objBalaEnemigos</object>
     <object>objects\objBalaEnemigosBl</object>
     <object>objects\objHealthUp</object>
-    <object>objects\objPowerUpVel</object>
     <object>objects\objVidaExtra</object>
+    <object>objects\objPowerUpVel</object>
     <object>objects\objArmaExtra</object>
     <object>objects\objArmaExtraMov</object>
     <object>objects\objArmaPerm</object>
     <object>objects\objPortal</object>
+    <object>objects\object44</object>
     <object>objects\objMeta</object>
     <object>objects\objLlave</object>
     <object>objects\objPuerta</object>
@@ -105,18 +113,34 @@
     <object>objects\objInicio</object>
     <object>objects\objGanaste</object>
     <object>objects\objPerdiste</object>
+    <object>objects\objTuto1</object>
+    <object>objects\objTuto2</object>
+    <object>objects\objTemporizador</object>
+    <object>objects\objEleccionPlayer</object>
+    <object>objects\objDificultad</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
     <room>rooms\Inicio</room>
     <room>rooms\tuto</room>
+    <room>rooms\tuto2</room>
+    <room>rooms\eleccion</room>
+    <room>rooms\dificultad</room>
+    <room>rooms\Nivel1_2</room>
+    <room>rooms\Nivel2_2</room>
+    <room>rooms\Nivel3_2</room>
+    <room>rooms\Nivel1_1</room>
+    <room>rooms\Nivel2_1</room>
+    <room>rooms\Nivel3_1</room>
+    <room>rooms\Nivel4_1</room>
+    <room>rooms\Nivel5_1</room>
     <room>rooms\Nivel1</room>
     <room>rooms\Nivel2</room>
     <room>rooms\Nivel3</room>
     <room>rooms\Nivel4</room>
     <room>rooms\Nivel5</room>
-    <room>rooms\secret</room>
     <room>rooms\NivelBOSS</room>
+    <room>rooms\secret</room>
     <room>rooms\Ganaste</room>
     <room>rooms\Perdiste</room>
   </rooms>

@@ -89,15 +89,17 @@ if(lives&lt;0){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>for(i=0;i&lt;lives;i+=1)
-draw_sprite(sprVidas,-1,view_xview[0]+400+(35+12*i),10)
+            <string>
+for(i=0;i&lt;lives;i+=1){
+    draw_sprite(sprVidas , -1, view_xview[0]+100+(0+32*i),10);
+};
 
 draw_set_colour(c_white);
-draw_text(view_xview[0]+530,10,"puntos: ");
-draw_text(view_xview[0]+600,10,score);
-draw_text(view_xview[0]+350,10,"vidas: ");
+draw_text(view_xview[0]+300,10,"puntos: ");
+draw_text(view_xview[0]+250,10,score);
+draw_text(view_xview[0]+50,10,"vidas: ");
 
-draw_healthbar(137,712,318,728,health,c_black,c_red,c_green, 0, true, false);
+draw_healthbar(view_xview[0]+137,712,view_xview[0]+318,728,health,c_black,c_red,c_green, 0, true, false);
 
 
 

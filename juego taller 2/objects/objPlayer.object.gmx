@@ -60,6 +60,9 @@ can_shoot=1
 
 ArmaExtra=false;
 
+globalvar ArmaExtra;
+
+
 
 
 
@@ -318,10 +321,28 @@ if (llave)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///animacion
+            <string>///Disparo
+fire=keyboard_check(vk_shift);
 
-
-
+if(fire){
+    if(can_shoot){
+        balas = instance_create(x,y-14,objBala);
+        can_shoot=0
+        alarm[4]=15;
+        if(hsp&gt;0){balas.direction=0;}
+        if(hsp&lt;0){balas.direction=180;}
+        if(ArmaExtra=true)
+            {
+            balas = 0;
+            balas2=instance_create(x,y,objBalaBazuca);
+            if(hsp&gt;0){balas2.direction=0;}
+            if(hsp&lt;0){balas2.direction=180}
+            }
+        }
+    }
+    
+        
+        
 </string>
           </argument>
         </arguments>
@@ -342,27 +363,10 @@ if (llave)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Disparo
-fire=keyboard_check(vk_shift);
+            <string>///animacion
 
-if(fire){
-    if(can_shoot){
-        balas = instance_create(x,y-14,objBala);
-        can_shoot=0
-        alarm[4]=15;
-        if(hsp&gt;0){balas.direction=0;}
-        if(hsp&lt;0){balas.direction=180;}
-        if(ArmaExtra)
-            {
-            bala2=instance_create(x,y,objMisil);
-            if(hsp&gt;0){bala2.direction=0;}
-            if(hsp&lt;0){bala2.direction=180;}
-            }
-        }
-    }
-    
-        
-        
+
+
 </string>
           </argument>
         </arguments>

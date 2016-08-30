@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>self</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -27,11 +27,17 @@
             <kind>1</kind>
             <string>/// Variables
 dir = -1;
-movespeed = 3;
+movespeed1 = 3;
 grav = 0.5;
-hsp = 0;
+horsp = 0;
 vsp = 0;
 fearofheights =1;
+Bhealth = 100;
+Blives = 2;
+
+globalvar Bhealth;
+globalvar Blives;
+globalvar movespeed1;
 
 </string>
           </argument>
@@ -55,31 +61,9 @@ fearofheights =1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///animacion
-if(dir=1){sprite_index=sprBOSS1;}
-if(dir=-1){sprite_index=sprBOSS;}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>hsp = dir * movespeed;
-vsp += grav; 
+            <string>hsp = dir * movespeed1;
+vsp += grav;
+globalvar movespeed1; 
 
 //Colision Horizontal
 if (place_meeting(x+hsp,y,objPared))
@@ -142,6 +126,29 @@ script0();
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>///animacion
+if(dir=1){sprite_index=sprBOSS1;}
+if(dir=-1){sprite_index=sprBOSS;}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>if(place_meeting(x,y,objArmaExtraMov))
 {
 bala1=instance_create(x,y,objBalaBazuca2)
@@ -150,61 +157,19 @@ bala2=instance_create(x,y,objBalaBazuca2)
 bala2.direction=30
 bala3=instance_create(x,y,objBalaBazuca2)
 bala3.direction=60
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="objBalaBazuca">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>Bhealth-=20;
-with(objBala)
+with(objArmaExtraMov)
 {
 instance_destroy();
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="objBala">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>Bhealth-=5;
-with(objBala)
-{
-instance_destroy();
 }
+
+if (Blives = 0) 
+    {
+    instance_destroy();
+    room_goto(Ganaste);
+    }
+
+
 </string>
           </argument>
         </arguments>

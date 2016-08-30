@@ -25,7 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Blives = 2;
+            <string>globalvar Bhealth;
+globalvar Blives;
+
+
+Blives = 2;
 Bhealth = 100;
 </string>
           </argument>
@@ -49,8 +53,11 @@ Bhealth = 100;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-///administracion vidas
+            <string>///administracion vidas
+
+globalvar Bhealth;
+globalvar Blives;
+globalvar movespeed1;
 
 if(Bhealth &lt;=0){
     if(Blives&gt;=1)
@@ -62,13 +69,11 @@ if(Bhealth &lt;=0){
     }
 }
 
-if(Blives&lt;0){
-    with(objBOSS)
-    {
-     instance_destroy();
-     instance_create(x,y,objPuerta)
-     }
+if(Blives=1)
+{
+movespeed1=8;
 }
+
 </string>
           </argument>
         </arguments>
@@ -91,13 +96,17 @@ if(Blives&lt;0){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>for(i=0;i&lt;Blives;i+=1)
-draw_sprite(sprVidas,-1,view_xview[0]+600+(35+12*i),10)
+            <string>globalvar Bhealth;
+globalvar Blives;
+
+
+for(i=0;i&lt;Blives;i+=1)
+draw_sprite(sprVidas,-1,view_xview[0]+700+(35+12*i),10)
 
 draw_set_colour(c_white);
-draw_text(view_xview[0]+350,10,"BossLives: ");
+draw_text(view_xview[0]+630,10,"BossLives: ");
 
-draw_healthbar(318,712,499,728,Bhealth,c_black,c_red,c_green, 0, true, false);
+draw_healthbar(view_xview[0]+618,712,view_xview[0]+799,728,Bhealth,c_black,c_red,c_green, 0, true, false);
 </string>
           </argument>
         </arguments>
